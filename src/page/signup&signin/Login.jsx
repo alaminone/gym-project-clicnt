@@ -48,7 +48,9 @@ const Login = () => {
             <input className="btn bg-indigo-600 hover:bg-indigo-200 text-white w-full" type="submit" value="Login" />
           </div>
         </form>
-        <p className="bg-indigo-600 hover:bg-indigo-200 mt-4 text-white rounded-full py-1 text-center">New here? <Link to={'/signup'} className="font-bold">Create a New Account</Link></p>
+     <p className="text-right my-4">
+     <Link to={'/register'} className="font-bold text-indigo-500 ">Create a New Account</Link>
+     </p>
       </div>
     </div>
   );

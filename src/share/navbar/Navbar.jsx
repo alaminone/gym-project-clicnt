@@ -1,25 +1,25 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import useAuthHook from "../../HOOK/useAuthHook";
 
 const Navbar = () => {
     const {user} = useAuthHook();
-  const navbarLinks = (
-    <li><NavLink to={'/'}>Home</NavLink></li>
-    // Add more navigation links as needed
-  );
+  const navbarLinks = <>
+   <li><Link to="/">Home</Link></li>
+          <li><Link to="/gallery">Gallery</Link></li>
+          <li><Link to="/trainer">Trainer Page</Link></li>
+          <li><Link to="/classes">Classes Page</Link></li>
+          <li><Link to="/dashboard">Dashboard</Link></li>
+          <li><Link to="/community">Community/Forums</Link></li>
+          {user ? (
+            <>
+              <li><Link to="/profile">User Profile</Link></li>
+              <li><button onClick={() => console.log('Logout')}>Logout</button></li>
+            </>
+          ) : (
+            <li><Link to="/login">Login</Link></li>
+          )}
+  </>
 
-  const profileSection = user ? (
-    <div className="navbar-end">
-      <div className="flex items-center space-x-2">
-        <img src={user.photo} alt="User" className="w-8 h-8 rounded-full" />
-        <span className="text-white">{user.name}</span>
-      </div>
-    </div>
-  ) : (
-    <div className="navbar-end">
-      <a className="btn bg-indigo-600 hover:bg-indigo-400 text-white">Sign Up</a>
-    </div>
-  );
 
   return (
     <div className="navbar bg-gradient-to-r from-indigo-500 to-purple-500">
@@ -41,7 +41,7 @@ const Navbar = () => {
           {navbarLinks}
         </ul>
       </div>
-      {profileSection}
+  
     </div>
   );
 };
