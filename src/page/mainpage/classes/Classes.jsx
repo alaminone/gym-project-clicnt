@@ -6,7 +6,7 @@ import Sectiontitle from '../../../component/sectiontitle/Sectiontitle';
 const Classes = () => {
   const axiosopen = useAxiosOpen();
   const [classData, setClassData] = useState([]);
-  console.log('frfffgbvj',classData)
+  
 
   useEffect(() => {
     const fetchData = async () => {
