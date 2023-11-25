@@ -2,7 +2,7 @@ import Sectiontitle from "../../../component/sectiontitle/Sectiontitle";
 
 const Feature = () => {
   return (
-   <section className=" my-28">
+   <section className="max-w-5xl mx-auto my-28">
 
       <Sectiontitle
       subtitle={'Featured '}
@@ -11,7 +11,7 @@ const Feature = () => {
 
       </Sectiontitle>
 
-     <div className="grid grid-cols-2  md:grid-cols-3  mt-20">
+     <div className="grid grid-cols-2  md:grid-cols-3  mt-24">
       {/* 1 */}
   <div className="bg-white overflow-hidden border border-gray-200 transform transition-transform hover:scale-105 hover:rotate-6 hover:shadow-md">
       <div className="flex justify-center">

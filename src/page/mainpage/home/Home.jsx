@@ -1,6 +1,7 @@
 import Feature from "../Feature/Feature";
 import AboutUs from "../about/AboutUs";
 import Bannar from "../bannar/Bannar";
+import Classes from "../classes/Classes";
 
 
 
@@ -10,6 +11,7 @@ const Home = () => {
           <Bannar></Bannar>
           <Feature></Feature>
           <AboutUs></AboutUs>
+          <Classes></Classes>
         </div>
     );
 };
