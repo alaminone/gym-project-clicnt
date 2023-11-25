@@ -1,9 +1,15 @@
+import Feature from "../Feature/Feature";
+import AboutUs from "../about/AboutUs";
+import Bannar from "../bannar/Bannar";
+
 
 
 const Home = () => {
     return (
         <div>
-            hllow
+          <Bannar></Bannar>
+          <Feature></Feature>
+          <AboutUs></AboutUs>
         </div>
     );
 };
