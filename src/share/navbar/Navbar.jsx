@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import useAuthHook from "../../HOOK/useAuthHook";
-
+import { MdOutlineFitnessCenter } from "react-icons/md";
 const Navbar = () => {
     const {user} = useAuthHook();
   const navbarLinks = <>
@@ -34,7 +34,10 @@ const Navbar = () => {
             {navbarLinks}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl text-white">Your Gym Name</a>
+        <div>
+        <h3 className="btn btn-ghost text-2xl text-white"><MdOutlineFitnessCenter className="text-2xl" />  POWER PLUS <MdOutlineFitnessCenter className="text-2xl" /> </h3>
+        <p className="text-center shadow-2xl"> FITNESS CLUB</p>
+        </div>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-white">
