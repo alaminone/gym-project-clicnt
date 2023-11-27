@@ -1,15 +1,14 @@
 
 import moment from "moment";
-import { MdOutlineFitnessCenter } from "react-icons/md";
+
 const Footer = () => {
     const yrar = moment().format('YYYY');
     return (
-        <div className="bg-slate-600 text-white">
+        <div className="bg-slate-800 text-white">
             <footer className="footer p-10  ">
   <aside>
   <div>
-        <h3 className="btn btn-ghost text-2xl text-white"><MdOutlineFitnessCenter className="text-2xl" />  POWER PLUS <MdOutlineFitnessCenter className="text-2xl" /> </h3>
-        <p className="text-center shadow-2xl text-white"> FITNESS CLUB</p>
+  <img className="w-3/12 h-1/6" src={'https://i.ibb.co/xznNLxk/logo-no-background.png'} alt="" />
         </div>
     <p>Thank you for choosing us as your fitness partner. <br /> Let is embark on this empowering journey together!
 

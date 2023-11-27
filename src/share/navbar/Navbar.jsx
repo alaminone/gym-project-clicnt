@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import useAuthHook from "../../HOOK/useAuthHook";
-import { MdOutlineFitnessCenter } from "react-icons/md";
+
 const Navbar = () => {
     const {user} = useAuthHook();
   const navbarLinks = <>
@@ -8,7 +8,7 @@ const Navbar = () => {
           <li><Link to="/gallery">Gallery</Link></li>
           <li><Link to="/trainer">Trainer Page</Link></li>
           <li><Link to="/classes">Classes Page</Link></li>
-          <li><Link to="/dashboard">Dashboard</Link></li>
+          <li><Link to="/dashbord">Dashboard</Link></li>
           <li><Link to="/community">Community/Forums</Link></li>
           {user ? (
             <>
@@ -22,7 +22,7 @@ const Navbar = () => {
 
 
   return (
-    <div className="navbar  fixed z-10 bg-opacity-50 max-w-7xl mx-auto bg-black text-white">
+    <div className="navbar  fixed z-10 bg-opacity-70 max-w-7xl mx-auto bg-black text-white">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden text-white">
@@ -35,8 +35,10 @@ const Navbar = () => {
           </ul>
         </div>
         <div>
-        <h3 className="btn btn-ghost text-2xl text-white"><MdOutlineFitnessCenter className="text-2xl" />  POWER PLUS <MdOutlineFitnessCenter className="text-2xl" /> </h3>
-        <p className="text-center shadow-2xl"> FITNESS CLUB</p>
+        {/* <h3 className="btn btn-ghost text-2xl text-white"><MdOutlineFitnessCenter className="text-2xl" />  POWER PLUS <MdOutlineFitnessCenter className="text-2xl" /> </h3>
+        <p className="text-center shadow-2xl"> FITNESS CLUB</p> */}
+<img className="w-3/12 h-1/6" src={'https://i.ibb.co/xznNLxk/logo-no-background.png'} alt="" />
+
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
