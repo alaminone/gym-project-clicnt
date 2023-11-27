@@ -8,18 +8,15 @@ const Allsubscribers = () => {
     const [subscribers, setSubscribers] = useState([]);
 
     useEffect(() => {
-        // Define an asynchronous function to fetch data
         const fetchData = async () => {
             try {
                 const response = await axiosSecure.get('subscriber');
-                // Access the data property of the response
                 setSubscribers(response.data);
             } catch (error) {
                 console.error("Error fetching subscribers:", error);
             }
         };
 
-        // Call the async function
         fetchData();
     }, [axiosSecure]);
 
@@ -27,26 +24,27 @@ const Allsubscribers = () => {
         <section>
             <div>
                 <Sectiontitle
-                    subtitle={'Power'}
-                    mainTitle={'All subscribers'}
+                    subtitle={'All subscribers'}
+                    mainTitle={'All Newsletter Subscribers'}
                 ></Sectiontitle>
 
                 <div className="overflow-x-auto mx-16 rounded-t-xl">
                     <table className="table w-full text-center">
-                        {/* head */}
-                        <thead className="bg-rose-400 text-black text-xl font-semibold">
+                        <thead className="bg-rose-400 text-white  text-xl font-semibold">
                             <tr>
                                 <th>#</th>
                                 <th>Name</th>
                                 <th>Email</th>
+                                
                             </tr>
                         </thead>
-                        <tbody className="bg-red-50 text-xl">
+                        <tbody>
                             {subscribers.map((sub, idx) => (
                                 <tr key={sub._id}>
-                                    <th>{idx + 1}</th>
+                                    <td>{idx + 1}</td>
                                     <td>{sub.name}</td>
                                     <td>{sub.email}</td>
+                                   
                                 </tr>
                             ))}
                         </tbody>

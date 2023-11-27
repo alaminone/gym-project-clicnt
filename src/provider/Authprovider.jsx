@@ -1,6 +1,7 @@
 import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import app from "../firebase/Firebase.config";
 import { createContext, useEffect, useState } from "react";
+import useAxiosOpen from "../HOOK/useAxiosOpen";
 
 
 export const AuthContext = createContext(null);
@@ -12,7 +13,7 @@ const Authprovider = ( {children}) => {
     // const axiosopenApi = useAxiosOpen()
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
-
+const axiosopen = useAxiosOpen();
    
     const createUser = (email, password) => {
         setLoading(true);
@@ -43,19 +44,19 @@ const Authprovider = ( {children}) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser);
-            // if(currentUser){
-            //     axiosopenApi.post('/jwt', {email: currentUser.email})
-            //     .then(data =>{
-            //         // console.log(data.data.token)
-            //         localStorage.setItem('jwt-token', data.data.token)
-            //         setLoading(false);
-            //     })
-            // }
-            // else{
-            //     localStorage.removeItem('jwt-token')
-            //     setLoading(false);
-            // }
-            
+            if(currentUser){
+                axiosopen.post('/jwt', {email: currentUser.email})
+                .then(data =>{
+                    console.log(data.data.token)
+                    localStorage.setItem('jwt-token', data.data.token)
+                    setLoading(false);
+                })
+            }
+            else{
+                localStorage.removeItem('')
+                setLoading(false);
+            }
+            console.log(currentUser.email)
         });
         return () => {
             return unsubscribe();

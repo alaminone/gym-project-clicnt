@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
-import useAxiosOpen from "../../HOOK/useAxiosOpen";
+
 import TrainerCard from "./TrainerCard";
 import Sectiontitle from "../../component/sectiontitle/Sectiontitle";
+import useAxiossecure from "../../HOOK/useAxiossecure";
 
 const Trainers = () => {
-  const axiosopen = useAxiosOpen();
+  const axiosSecure = useAxiossecure();
   const [trainers, setTrainers] = useState([]);
-console.log('rdrd', trainers)
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axiosopen.get('/trainers');
+        const response = await axiosSecure.get('/trainers');
         setTrainers(response.data);
       } catch (error) {
         console.error('Error fetching trainers:', error);
@@ -18,7 +19,7 @@ console.log('rdrd', trainers)
     };
 
     fetchData();
-  }, [axiosopen]);
+  }, [axiosSecure]);
 
   return (
    <section className=" max-w-5xl mx-auto py-44">

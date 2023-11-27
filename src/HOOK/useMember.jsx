@@ -3,21 +3,20 @@ import useAuthHook from "./useAuthHook";
 import useAxiossecure from "./useAxiossecure";
 
 
-
-const useAdmin = () => {
+const useMember = () => {
     const {user} = useAuthHook();
     const axiosSecure = useAxiossecure();
    
-    const {data: isAdmin,isLoading} = useQuery({
-        queryKey: ['isAdmin', user?.email],
+    const {data: isMember,isLoading} = useQuery({
+        queryKey: ['isMember', user?.email],
        
         queryFn: async () => {
-            const res = await axiosSecure.get(`/users/admin/${user?.email}`);
+            const res = await axiosSecure.get(`/users/member/${user?.email}`);
             return res.data.admin;
         }
     })
-    
-    return [isAdmin , isLoading]
+    return [isMember , isLoading]
 };
 
-export default useAdmin;
+
+export default useMember;

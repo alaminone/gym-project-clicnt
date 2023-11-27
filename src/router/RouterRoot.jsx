@@ -8,6 +8,9 @@ import Trainers from "../page/trainer/Trainers";
 import Trainerdetiles from "../page/trainer/Trainerdetiles";
 import Dashbord from "../DASHBOER/bord/Dashbord";
 import Allsubscribers from "../DASHBOER/Allsubscribers/Allsubscribers";
+import Alltrainer from "../DASHBOER/AllTrainer/Alltrainer";
+import AllUsers from "../DASHBOER/Allusers/AllUsers";
+import Classespage from "../component/classespage/Classespage";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +38,10 @@ const router = createBrowserRouter([
         element: <Trainers></Trainers>,
       },
       {
+        path:"classespage",
+        element:<Classespage></Classespage>
+      },
+      {
         path: "/trainerdetails/:id",
         element: <Trainerdetiles />,
         loader: ({ params }) =>
@@ -49,6 +56,14 @@ const router = createBrowserRouter([
       {
         path:'allsubscribers',
         element:<Allsubscribers></Allsubscribers>
+      },
+      {
+        path:"alltrainers",
+        element:<Alltrainer></Alltrainer>
+      },
+      {
+        path: 'allusers',
+        element:<AllUsers></AllUsers>
       }
     ]
   }

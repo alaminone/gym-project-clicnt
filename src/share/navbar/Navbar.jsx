@@ -2,7 +2,13 @@ import { Link } from "react-router-dom";
 import useAuthHook from "../../HOOK/useAuthHook";
 
 const Navbar = () => {
-    const {user} = useAuthHook();
+    const {user ,logOut } = useAuthHook();
+
+    const handleLogOut = () => {
+      logOut()
+          .then(() => { })
+          .catch(error => console.log(error));
+  }
   const navbarLinks = <>
    <li><Link to="/">Home</Link></li>
           <li><Link to="/gallery">Gallery</Link></li>
@@ -10,14 +16,15 @@ const Navbar = () => {
           <li><Link to="/classes">Classes Page</Link></li>
           <li><Link to="/dashbord">Dashboard</Link></li>
           <li><Link to="/community">Community/Forums</Link></li>
-          {user ? (
-            <>
-              <li><Link to="/profile">User Profile</Link></li>
-              <li><button onClick={() => console.log('Logout')}>Logout</button></li>
+     
+    {
+            user ? <>
+            <p>{user?.displayName}</p>
+                <button onClick={handleLogOut} className="btn btn-ghost">LogOut</button>
+            </> : <>
+                <li><Link to="/login">Login</Link></li>
             </>
-          ) : (
-            <li><Link to="/login">Login</Link></li>
-          )}
+        }
   </>
 
 

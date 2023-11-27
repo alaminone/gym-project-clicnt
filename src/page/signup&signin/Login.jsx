@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import { Link, useNavigate } from "react-router-dom";
 import useAuthHook from "../../HOOK/useAuthHook";
+import Googlelogin from "../../component/Googlelogin/Googlelogin";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -51,6 +52,7 @@ const Login = () => {
      <p className="text-right my-4">
      <Link to={'/register'} className="font-bold text-indigo-500 ">Create a New Account</Link>
      </p>
+     <Googlelogin></Googlelogin>
       </div>
     </div>
   );
