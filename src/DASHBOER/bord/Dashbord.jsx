@@ -9,7 +9,7 @@ const Dashbord = () => {
     const [isAdmin] = useAdmin();
 
     return (
-       <section>
+       <section className="max-w-7xl mx-auto ">
         <div className="flex">
             {/* left side */}
                 <div className="min-h-screen w-3/12 bg-slate-200">
@@ -58,7 +58,7 @@ const Dashbord = () => {
 
                 </div>
                 {/* right side */}
-                <div className="flex-1">
+                <div className="flex-1 px-4 pt-10">
 <Outlet></Outlet>
                 </div>
         </div>
