@@ -11,6 +11,7 @@ import Allsubscribers from "../DASHBOER/Allsubscribers/Allsubscribers";
 import Alltrainer from "../DASHBOER/AllTrainer/Alltrainer";
 import AllUsers from "../DASHBOER/Allusers/AllUsers";
 import Classespage from "../component/classespage/Classespage";
+import Becomeatrainer from "../component/becomeatrainer/Becomeatrainer";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path:"/classespage",
         element:<Classespage></Classespage>
+      },
+      {
+        path:"/becomeatrainer",
+        element:<Becomeatrainer></Becomeatrainer>
       },
       {
         path: "/trainerdetails/:id",

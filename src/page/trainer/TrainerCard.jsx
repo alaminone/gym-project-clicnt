@@ -3,6 +3,7 @@ import { FaFacebookSquare, FaInstagram } from 'react-icons/fa';
 import { IoCheckbox } from 'react-icons/io5';
 import { MdMarkEmailRead } from 'react-icons/md';
 import { Link } from 'react-router-dom';
+import { MdKeyboardDoubleArrowRight } from "react-icons/md"
 
 const TrainerCard = ({ trainer }) => {
   const { trainerName, profileImage, yearsOfExperience, skills,} = trainer;
@@ -39,8 +40,8 @@ const TrainerCard = ({ trainer }) => {
         </div>
         
       </div>
-      <button className='mt-auto bg-rose-600 py-3  text-white font-bold w-full'>
-          Know More
+      <button className='mt-auto bg-rose-600 py-3  text-white font-bold w-full flex items-center justify-center gap-2'>
+          Know More <MdKeyboardDoubleArrowRight className="md:text-2xl" />
         </button>
     </div>
     </Link>

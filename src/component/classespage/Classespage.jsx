@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import useAxiosOpen from '../../HOOK/useAxiosOpen';

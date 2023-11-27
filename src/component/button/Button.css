@@ -1,0 +1,46 @@
+/* ButtonStyles.css */
+
+/* Unique button styling */
+.custom-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff4081; /* Your desired button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  /* Button animation */
+  .custom-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.3); /* Button ripple color */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+    z-index: -1;
+  }
+  
+  .custom-button:hover::before {
+    width: 120%; /* Adjust the ripple effect width */
+    height: 300px; /* Adjust the ripple effect height */
+  }
+
+  @keyframes custom-button {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
