@@ -12,6 +12,8 @@ import Alltrainer from "../DASHBOER/AllTrainer/Alltrainer";
 import AllUsers from "../DASHBOER/Allusers/AllUsers";
 import Classespage from "../component/classespage/Classespage";
 import Becomeatrainer from "../component/becomeatrainer/Becomeatrainer";
+import Privetroute from "./Privetroute";
+import Appliedtrainer from "../DASHBOER/appliedtrainer/Appliedtrainer";
 
 const router = createBrowserRouter([
   {
@@ -44,11 +46,11 @@ const router = createBrowserRouter([
       },
       {
         path:"/becomeatrainer",
-        element:<Becomeatrainer></Becomeatrainer>
+        element:<Privetroute><Becomeatrainer></Becomeatrainer></Privetroute>
       },
       {
         path: "/trainerdetails/:id",
-        element: <Trainerdetiles />,
+        element:<Privetroute> <Trainerdetiles></Trainerdetiles></Privetroute>,
         loader: ({ params }) =>
           fetch(`http://localhost:5001/trainers/${params.id}`)
       }
@@ -69,6 +71,10 @@ const router = createBrowserRouter([
       {
         path: 'allusers',
         element:<AllUsers></AllUsers>
+      },
+      {
+        path:'appliedtrainer',
+        element:<Appliedtrainer></Appliedtrainer>
       }
     ]
   }

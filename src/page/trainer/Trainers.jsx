@@ -32,7 +32,7 @@ mainTitle={'Choose Your Training Coach'}
 ></Sectiontitle>
 
 <Link to={'/becomeatrainer'}>
-<div className="w-3/12 mx-auto  ">
+<div className="w-3/12 mx-auto hover:bg-rose-200 ">
   <img className="w-7/12 h-4/6 mx-auto" src={'https://i.ibb.co/PTk023T/valery-sysoev-LDAir-ERNzew-unsplash-fotor-2023112619814-removebg-preview.png'} alt="" />
   <button className="btn w-full text-xl  bg-rose-500 text-white flex items-center justify-center gap-2"> Become a Trainer. <MdKeyboardDoubleArrowRight className="md:text-2xl" /></button>
 
