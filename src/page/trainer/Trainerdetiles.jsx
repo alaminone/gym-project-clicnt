@@ -1,9 +1,9 @@
 import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
 import { IoCheckbox } from "react-icons/io5";
 import { MdMarkEmailRead } from "react-icons/md";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Sectiontitle from "../../component/sectiontitle/Sectiontitle";
-
+import { MdKeyboardDoubleArrowRight } from "react-icons/md"
 const TrainerDetails = () => {
   const details = useLoaderData();
 
@@ -55,9 +55,9 @@ const TrainerDetails = () => {
           </h3>
           <div className="grid grid-cols-3 gap-4 text-center my-5">
             {availableTimeWeek &&
-              availableTimeWeek.map((day) => (
+              availableTimeWeek.map((day,idx) => (
                 <div
-                  key={day?.classNumber}
+                  key={idx}
                   className="p-4 border border-gray-300 rounded-md"
                 >
                   <p className="text-lg font-semibold mb-2">{day}</p>
@@ -78,6 +78,11 @@ const TrainerDetails = () => {
                 </div>
               ))}
           </div>
+        </div>
+        <div className="  flex justify-end my-9">
+         <Link to={'/userbookedtrainer'}>
+         <button className=" btn-outline  w-3/12 text-rose-500 text-xl flex gap-1 "> Book Now Your Trainer <MdKeyboardDoubleArrowRight className="md:text-2xl" /></button>
+         </Link>
         </div>
 
         <div className="mt-6">
