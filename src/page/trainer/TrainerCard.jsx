@@ -6,20 +6,24 @@ import { Link } from 'react-router-dom';
 import { MdKeyboardDoubleArrowRight } from "react-icons/md"
 
 const TrainerCard = ({ trainer }) => {
-  const { trainerName, profileImage, yearsOfExperience, skills,} = trainer;
+  const { trainerName, Image,Experience, skills,} = trainer;
+  // console.log(trainer)
 
   return (
    <section>
     <Link to={`/trainerdetails/${trainer._id}`}>
     <div className="bg-black flex flex-col">
       <div>
-        <img className="" src={profileImage} alt={trainerName} />
+      
+          <img className="" src={Image} alt={trainerName} /> 
+     
       </div>
       <div className="bg-blue-950 mx-4 md:mx-10 text-white md:py-10 py-4 md:px-5 -mt-10 opacity-90 grow flex flex-col">
         <h2 className="font-bold md:text-lg">{trainerName}</h2>
         <p>
           Experience:
-          <span className='text-5xl text-rose-600 font-extrabold'> {yearsOfExperience}</span> Years.
+          <span className='text-5xl text-rose-600 font-extrabold'> {
+Experience}</span> Years.
         </p>
         <p className="md:text-3xl flex justify-evenly mt-4">
           <FaFacebookSquare />

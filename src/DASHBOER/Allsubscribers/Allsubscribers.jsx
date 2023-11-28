@@ -19,6 +19,7 @@ const Allsubscribers = () => {
 
         fetchData();
     }, [axiosSecure]);
+    
 
     return (
         <section>

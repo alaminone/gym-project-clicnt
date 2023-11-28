@@ -14,7 +14,7 @@ const AllUsers = () => {
       return res.data;
     },
   });
-console.log(users)
+
   const handleMakeAdmin = (user) => {
     axiosSecure.patch(`/users/admin/${user._id}`).then((res) => {
       if (res.data.modifiedCount) {
@@ -88,7 +88,7 @@ console.log(users)
       }
     });
   };
-  if(isLoading) return <p> loding ......</p>
+  if(isLoading) return <progress className="progress w-56"></progress>
   return (
     <div className="w-full">
       <Helmet>

@@ -47,7 +47,7 @@ const axiosopen = useAxiosOpen();
             if(currentUser){
                 axiosopen.post('/jwt', {email: currentUser.email})
                 .then(data =>{
-                    console.log(data.data.token)
+                    // console.log(data.data.token)
                     localStorage.setItem('jwt-token', data.data.token)
                     setLoading(false);
                 })
@@ -56,7 +56,7 @@ const axiosopen = useAxiosOpen();
                 localStorage.removeItem('')
                 setLoading(false);
             }
-            console.log(currentUser.email)
+            // console.log(currentUser.email)
         });
         return () => {
             return unsubscribe();

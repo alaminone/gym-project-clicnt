@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
 import useAuthHook from "../../HOOK/useAuthHook";
+// import useAdmin from "../../HOOK/useAdmin";
+// import useTriner from "../../HOOK/useTriner";
+// import useMember from "../../HOOK/useMember";
 
 const Navbar = () => {
-    const {user ,logOut } = useAuthHook();
+    const {user ,logOut,loading } = useAuthHook();
+
+    // const [isAdmin] = useAdmin();
+    // const [isTrainer] = useTriner();
+    // const [isMember] = useMember();
 
     const handleLogOut = () => {
       logOut()
@@ -14,7 +21,9 @@ const Navbar = () => {
           <li><Link to="/gallery">Gallery</Link></li>
           <li><Link to="/trainer">Trainer Page</Link></li>
           <li><Link to="/classespage">Classes Page</Link></li>
-          <li><Link to="/dashbord">Dashboard</Link></li>
+         
+            <li><Link to="/dashbord">Dashboard</Link></li>
+          
           <li><Link to="/community">Community/Forums</Link></li>
      
     {
@@ -26,7 +35,9 @@ const Navbar = () => {
             </>
         }
   </>
-
+ if(loading){
+  return <progress className="progress w-full progress-secondary"></progress>
+}
 
   return (
     <div className="navbar  fixed z-10 bg-opacity-70 max-w-7xl mx-auto bg-black text-white">

@@ -1,27 +1,34 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md"
 import TrainerCard from "./TrainerCard";
 import Sectiontitle from "../../component/sectiontitle/Sectiontitle";
-import useAxiossecure from "../../HOOK/useAxiossecure";
+
 import { Link } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+import useAxiosOpen from "../../HOOK/useAxiosOpen";
 
 
 const Trainers = () => {
-  const axiosSecure = useAxiossecure();
-  const [trainers, setTrainers] = useState([]);
+ 
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axiosSecure.get('/trainers');
-        setTrainers(response.data);
-      } catch (error) {
-        console.error('Error fetching trainers:', error);
-      }
-    };
+  const axiosopen = useAxiosOpen()
+  
 
-    fetchData();
-  }, [axiosSecure]);
+  const { data: trainer = [], isLoading, } = useQuery({
+      queryKey: ["trainer"],
+      queryFn: async () => {
+          const res = await axiosopen.get("/trainers");
+          return res.data;
+      },
+  });
+
+
+  const confirmTrainer = trainer.filter(user => user.role === "trainer");
+  
+  // console.log('ll', trainer)
+
+
+  if(isLoading) return <progress className="progress  flex justify-center items-center w-full"></progress>
 
   return (
    <section className=" max-w-5xl mx-auto py-44">
@@ -39,8 +46,9 @@ mainTitle={'Choose Your Training Coach'}
 </div>
 </Link>
      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      {trainers.map(trainer => (
+      {confirmTrainer.map(trainer => (
         <TrainerCard key={trainer._id} trainer={trainer} />
+        
       ))}
     </div>
    </section>
