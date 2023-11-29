@@ -2,25 +2,39 @@ import { Helmet } from "react-helmet";
 import { Link, useNavigate } from "react-router-dom";
 import useAuthHook from "../../HOOK/useAuthHook";
 import Googlelogin from "../../component/Googlelogin/Googlelogin";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const navigate = useNavigate();
   const { signIn } = useAuthHook();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-
-    signIn(email, password)
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
-
-        navigate('/dashboard');
+  
+    try {
+      const result = await signIn(email, password);
+      const user = result.user;
+      console.log(user);
+  
+     
+      toast.success('Login successful!', {
+        duration: 4000, 
       });
+  
+    
+      navigate('/dashboard');
+    } catch (error) {
+  
+      console.error('Login failed:', error.message);
+      toast.error('Login failed. Please check your credentials and try again.', {
+        duration: 4000,
+      });
+    }
   };
+  
 
   return (
     <div className="mx-auto bg-white p-8 rounded-lg shadow-md flex w-9/12 py-28">

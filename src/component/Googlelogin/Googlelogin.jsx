@@ -2,6 +2,7 @@ import { FaGoogle } from "react-icons/fa";
 import useAxiosOpen from "../../HOOK/useAxiosOpen";
 import { useNavigate } from "react-router-dom";
 import useAuthHook from "../../HOOK/useAuthHook";
+import toast from "react-hot-toast";
 
 
 const Googlelogin = () => {
@@ -21,6 +22,10 @@ const Googlelogin = () => {
   
           axiosopenApi.post("/users", userInfo).then((res) => {
             console.log(res);
+          });
+
+          toast.success('Login successful!', {
+            duration: 4000, 
           });
           naviget('/')
         })

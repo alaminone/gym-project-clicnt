@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import useAuthHook from "../../HOOK/useAuthHook";
 import useAxiosOpen from "../../HOOK/useAxiosOpen";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 
 const Register = () => {
@@ -27,6 +28,11 @@ const Register = () => {
                         axiosopen.post("/users", userInfo).then((res) => {
                             console.log(res);
                           });
+
+                          toast.success('Register successful!', {
+                            duration: 4000, 
+                          });
+
                           navigate('/')
                         })
                         .catch((error) => {
