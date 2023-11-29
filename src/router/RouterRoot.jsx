@@ -15,11 +15,13 @@ import Becomeatrainer from "../component/becomeatrainer/Becomeatrainer";
 import Privetroute from "./Privetroute";
 import Appliedtrainer from "../DASHBOER/appliedtrainer/Appliedtrainer";
 import Userbookedtrainer from "../component/userbookedtrainer/Userbookedtrainer";
+import Error from "../component/error/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout></Layout>,
+    errorElement:<Error></Error>,
     children: [
       {
         path: "/",

@@ -4,6 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import useAxiosOpen from '../../HOOK/useAxiosOpen';
 import Sectiontitle from '../sectiontitle/Sectiontitle';
 
+
 const Classespage = () => {
   const axiosopen = useAxiosOpen();
 
@@ -50,6 +51,8 @@ const Classespage = () => {
       ))
     )}
   </div>
+
+
   </section>
   );
 };

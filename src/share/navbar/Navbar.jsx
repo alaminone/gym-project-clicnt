@@ -24,12 +24,27 @@ const Navbar = () => {
          
             <li><Link to="/dashbord">Dashboard</Link></li>
           
-          <li><Link to="/community">Community/Forums</Link></li>
+          <li><Link to="/community">Community</Link></li>
      
     {
             user ? <>
-            <p>{user?.displayName}</p>
-                <button onClick={handleLogOut} className="btn btn-ghost">LogOut</button>
+            <div className="dropdown dropdown-end">
+      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+      <div className="w-10 rounded-full">
+  <img alt="Tailwind CSS Navbar component" src={user.display?.image} />
+</div>
+      </div>
+      <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-black">
+        <li>
+          <a className="justify-between">
+            Profile
+            <span className="badge">New</span>
+          </a>
+        </li>
+        <li><a>Settings</a></li>
+       <li><button onClick={handleLogOut}>Logout</button></li>
+      </ul>
+    </div>
             </> : <>
                 <li><Link to="/login">Login</Link></li>
             </>

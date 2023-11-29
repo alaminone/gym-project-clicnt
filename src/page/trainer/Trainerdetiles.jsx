@@ -9,10 +9,8 @@ const TrainerDetails = () => {
 
   const {
     name,
-
-    Image,
-
-    skills,
+Image,
+ skills,
     availableTimeWeek,
     timeSlots,
     Experience,
@@ -79,12 +77,13 @@ const TrainerDetails = () => {
               ))}
           </div>
         </div>
+        <Link to={'/userbookedtrainer'}>
         <div className="  flex justify-end my-9">
-         <Link to={'/userbookedtrainer'}>
-         <button className=" btn-outline  w-3/12 text-rose-500 text-xl flex gap-1 "> Book Now Your Trainer <MdKeyboardDoubleArrowRight className="md:text-2xl" /></button>
-         </Link>
+       
+         <button className=" btn-outline btn  w-3/12 text-rose-500 text-xl flex gap-1 "> Book Now Your Trainer <MdKeyboardDoubleArrowRight className="md:text-2xl" /></button>
+        
         </div>
-
+        </Link>
         <div className="mt-6">
           <h3 className="text-xl md:text-3xl font-bold mb-7">
             Connect with {name}

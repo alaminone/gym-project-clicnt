@@ -28,6 +28,11 @@ const Dashboard = () => {
             />
           </div>
           <ul>
+            <li>
+              <NavLink to={'/'}><button className="btn btn-ghost w-full text-base font-semibold">Home</button></NavLink>
+            </li>
+          </ul>
+          <ul>
             {isAdmin && (
               <>
                 <li>
