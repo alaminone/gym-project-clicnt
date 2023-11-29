@@ -16,6 +16,7 @@ import Privetroute from "./Privetroute";
 import Appliedtrainer from "../DASHBOER/appliedtrainer/Appliedtrainer";
 import Userbookedtrainer from "../component/userbookedtrainer/Userbookedtrainer";
 import Error from "../component/error/Error";
+import Payment from "../page/payment/Payment";
 
 const router = createBrowserRouter([
   {
@@ -58,8 +59,14 @@ const router = createBrowserRouter([
           fetch(`http://localhost:5001/trainers/${params.id}`)
       } ,
       {
-        path:'/userbookedtrainer',
-        element:<Userbookedtrainer></Userbookedtrainer>
+        path:'/userbookedtrainer/:id',
+        element:<Userbookedtrainer></Userbookedtrainer>,
+        loader: ({ params }) =>
+        fetch(`http://localhost:5001/trainers/${params.id}`)
+      },
+      {
+        path:'/payment',
+        element:<Payment></Payment>
       }
     ],
   },

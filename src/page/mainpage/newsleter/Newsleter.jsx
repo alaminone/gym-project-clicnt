@@ -30,7 +30,7 @@ const Newsleter = () => {
   return (
     <section className="my-20 max-w-7xl mx-auto">
       <Helmet>
-        <title>Bistro Boss | Home</title>
+        <title>Power | Home</title>
       </Helmet>
       <div className="hero min-h-screen py-12">
         <div className="hero-content flex flex-col md:flex-row-reverse lg:pb-20 shadow-2xl bg-yellow-400 md:px-20 rounded-lg">

@@ -17,7 +17,7 @@ const Navbar = () => {
           .catch(error => console.log(error));
   }
   const navbarLinks = <>
-   <li><Link to="/">Home</Link></li>
+   <li ><Link to="/">Home</Link></li>
           <li><Link to="/gallery">Gallery</Link></li>
           <li><Link to="/trainer">Trainer Page</Link></li>
           <li><Link to="/classespage">Classes Page</Link></li>

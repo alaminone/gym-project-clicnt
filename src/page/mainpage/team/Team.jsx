@@ -6,7 +6,7 @@ import { MdMarkEmailRead } from "react-icons/md";
 import "keen-slider/keen-slider.min.css";
 
 import Sectiontitle from "../../../component/sectiontitle/Sectiontitle";
-// import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 
 const Team = () => {
   
@@ -24,9 +24,9 @@ const Team = () => {
   return (
   <div >
       <section className="team-section my-20 w-full md:w-8/12 mx-auto mb-96">
-      {/* <Helmet>
-        <title>Bistro Boss | Team</title>
-      </Helmet> */}
+      <Helmet>
+        <title>Power | Team</title>
+      </Helmet>
       <Sectiontitle subtitle="Meet Our Team" />
       <div ref={sliderRef} className="keen-slider">
       <div className="keen-slider__slide number-slide1 bg-black">

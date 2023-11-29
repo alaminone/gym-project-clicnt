@@ -1,5 +1,6 @@
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+import { Link } from "react-router-dom";
 
 const Bannar = () => {
   const [sliderRef] = useKeenSlider(
@@ -49,11 +50,13 @@ const Bannar = () => {
       <div className="absolute flex h-full items-center   right-0 bottom-0 gap-5 bg-gradient-to-r from-[rgba(21, 21, 21, 0.00)] to-[#151515] text-white">
       <div className="banner-content text-white space-y-7 pl-4 md:pl-14 w-full">
     <h1 className="banner-title text-3xl md:text-6xl font-bold">Total Body Wellness</h1>
-    <p className="banner-description text-xs md:text-xl">
+    <p className="banner-description text-xs md:text-xl mb-6">
       Experience total body wellness with our holistic approach to
       fitness.
     </p>
+    <Link to={'/classespage'}>
     <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-outline text-white">Our Classes</button>
+    </Link>
   </div>
       </div>
       
@@ -66,10 +69,12 @@ const Bannar = () => {
       <div className="absolute flex h-full items-center   left-0 top-0 gap-5 bg-gradient-to-r from-[rgba(21, 21, 21, 0.00)] to-[#151515] text-white">
       <div className="banner-content text-white space-y-7 pl-4 md:pl-14 w-full">
     <h1 className="banner-title text-3xl md:text-6xl font-bold">Elevate Your Fitness</h1>
-    <p className="banner-description text-xs md:text-xl">
+    <p className="banner-description text-xs md:text-xl mb-6">
     Achieve your fitness goals with our expert trainers.
     </p>
+    <Link to={'/classespage'}>
     <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-outline text-white">Our Classes</button>
+    </Link>
   </div>
       </div>
     </div>
@@ -81,10 +86,12 @@ const Bannar = () => {
       <div className="absolute flex h-full items-center   left-0 top-0 gap-5 bg-gradient-to-r from-[rgba(21, 21, 21, 0.00)] to-[#151515] text-white">
       <div className="banner-content text-white space-y-7 pl-4 md:pl-14 w-full">
     <h1 className="banner-title text-3xl md:text-6xl font-bold">Strength Redefined</h1>
-    <p className="banner-description text-xs md:text-xl">
+    <p className="banner-description text-xs md:text-xl mb-6">
     Build strength and endurance with our diverse workout programs.
     </p>
+    <Link to={'/classespage'}>
     <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-outline text-white">Our Classes</button>
+    </Link>
   </div>
       </div>
     </div>
@@ -96,10 +103,12 @@ const Bannar = () => {
       <div className="absolute flex h-full items-center   left-0 top-0 gap-5 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)] text-white">
       <div className="banner-content text-white space-y-7 pl-4 md:pl-14 w-full">
     <h1 className="banner-title text-3xl md:text-6xl font-bold">Unleash Your Potential</h1>
-    <p className="banner-description text-xs md:text-xl">
+    <p className="banner-description text-xs md:text-xl mb-6">
     Unlock your true potential with our personalized fitness plans.
     </p>
+    <Link to={'/classespage'}>
     <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-outline text-white">Our Classes</button>
+    </Link>
   </div>
       </div>
     </div>
@@ -111,9 +120,11 @@ const Bannar = () => {
       <div className="absolute flex h-full items-center   left-0 top-0 gap-5 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)] text-white">
       <div className="banner-content text-white space-y-7 pl-4 md:pl-14 w-full">
     <h1 className="banner-title text-3xl md:text-6xl font-bold">Focused Workouts</h1>
-    <p className="banner-description text-xs md:text-xl">
+    <p className="banner-description text-xs md:text-xl mb-6">
     Get focused and achieve results with our tailored workout plans.  </p>
+    <Link to={'/classespage'}>
     <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-outline text-white">Our Classes</button>
+    </Link>
   </div>
       </div>
     </div>
@@ -125,10 +136,12 @@ const Bannar = () => {
       <div className="absolute flex h-full items-center   left-0 top-0 gap-5 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)] text-white">
       <div className="banner-content text-white space-y-7 pl-4 md:pl-14 w-full">
     <h1 className="banner-title text-3xl md:text-6xl font-bold">Total Body Wellness</h1>
-    <p className="banner-description text-xs md:text-xl">
+    <p className="banner-description text-xs md:text-xl mb-6">
     Experience total body wellness with our holistic approach to
       fitness.  </p>
+    <Link to={'/classespage'}>
     <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-outline text-white">Our Classes</button>
+    </Link>
   </div>
       </div>
     </div>

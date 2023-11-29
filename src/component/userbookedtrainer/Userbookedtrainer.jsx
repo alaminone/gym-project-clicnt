@@ -4,8 +4,12 @@ import useAxiosOpen from '../../HOOK/useAxiosOpen';
 import Sectiontitle from '../sectiontitle/Sectiontitle';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Tabcaard from '../Tabcard/Tabcaard';
+import { useLoaderData } from 'react-router-dom';
 
 const Userbookedtrainer = () => {
+  
+  const details = useLoaderData();
+
   const axiosopen = useAxiosOpen();
   const { data: classes = [] } = useQuery({
     queryKey: ['classes'],
@@ -28,6 +32,11 @@ const Userbookedtrainer = () => {
   return (
     <section className="py-28">
       <Sectiontitle mainTitle={'Trainer Booking'}></Sectiontitle>
+
+      <div className='flex items-center gap-4'>
+        <img className='w-2/12 h-1/6' src={details.Image} alt="" />
+        <h3 className='md:text-4xl'>Join My Classes And Choose Your Plan</h3>
+      </div>
 
       <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
         <TabList className="flex gap-4 justify-center text-xl font-semibold my-8">

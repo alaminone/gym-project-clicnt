@@ -20,8 +20,8 @@ Image,
     <section className="max-w-6xl mx-auto md:py-44">
       <Sectiontitle subtitle={"About"} mainTitle={`${name}`}></Sectiontitle>
       <div className="p-8">
-        <div className="flex items-center">
-          <img className="w-9/12 mr-4" src={Image} alt={name} />
+        <div className="flex items-center justify-between">
+          <img className="w-7/12 mr-4" src={Image} alt={name} />
           <div>
             <h2 className="text-2xl md:text-7xl font-bold">{name}</h2>
             <p className="md:text-2xl">
@@ -77,10 +77,11 @@ Image,
               ))}
           </div>
         </div>
-        <Link to={'/userbookedtrainer'}>
+        {/* to={`/trainerdetails/${trainer._id}`} */}
+        <Link to={`/userbookedtrainer/${details._id}`}>
         <div className="  flex justify-end my-9">
        
-         <button className=" btn-outline btn  w-3/12 text-rose-500 text-xl flex gap-1 "> Book Now Your Trainer <MdKeyboardDoubleArrowRight className="md:text-2xl" /></button>
+         <button className=" btn-outline btn  w-5/12 text-rose-500 text-xl flex gap-1 "> Book Now Your Trainer  As [{name}] <MdKeyboardDoubleArrowRight className="md:text-2xl" /></button>
         
         </div>
         </Link>

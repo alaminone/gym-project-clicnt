@@ -11,7 +11,7 @@ const Tabcaard = ({cls}) => {
   return (
    <section className="max-w-5xl mx-auto">
 
-    <Link to={'payment'}>
+    <Link to={'/payment'}>
     <div className="flex flex-col h-full bg-indigo-500">
       <div>
         <img className="h-48 w-full rounded-t-sm" src={imageURL} alt="" />

@@ -42,7 +42,7 @@ const Register = () => {
     return (
         < section >
         <Helmet>
-            <title>Bistro Boss | Sign Up</title>
+            <title>Power | Sign Up</title>
         </Helmet>
         <div className="hero min-h-screen  py-12 ">
             <div className="hero-content flex-col lg:flex-row-reverse shadow-2xl max-w-5xl mx-auto rounded-lg">
