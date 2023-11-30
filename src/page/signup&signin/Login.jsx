@@ -37,7 +37,7 @@ const Login = () => {
   
 
   return (
-    <div className="mx-auto bg-white p-8 rounded-lg shadow-md flex w-9/12 py-28">
+    <div className="mx-auto bg-white p-8 rounded-lg shadow-md flex w-9/12 py-36 max-h-screen">
       <Helmet>
         <title>Dhaka Spice | Login</title>
       </Helmet>

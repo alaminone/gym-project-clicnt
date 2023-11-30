@@ -1,4 +1,4 @@
-import { FaGoogle } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 import useAxiosOpen from "../../HOOK/useAxiosOpen";
 import { useNavigate } from "react-router-dom";
 import useAuthHook from "../../HOOK/useAuthHook";
@@ -42,7 +42,7 @@ const Googlelogin = () => {
             onClick={handleGooglelogin}
             className="btn w-3/5 mx-auto btn-outline"
           >
-            <FaGoogle></FaGoogle>
+            <FcGoogle className="text-3xl" />
           </button>
         </div>
       </div>

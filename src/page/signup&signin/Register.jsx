@@ -4,6 +4,7 @@ import useAuthHook from "../../HOOK/useAuthHook";
 import useAxiosOpen from "../../HOOK/useAxiosOpen";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import Googlelogin from "../../component/Googlelogin/Googlelogin";
 
 
 const Register = () => {
@@ -46,7 +47,7 @@ const Register = () => {
             })
     };
     return (
-        < section >
+        < section className="pt-20">
         <Helmet>
             <title>Power | Sign Up</title>
         </Helmet>
@@ -102,6 +103,9 @@ const Register = () => {
                             <input className="btn bg-indigo-600 hover:bg-indigo-200 text-white w-full" type="submit" value="Sign Up" />
                         </div>
                     </form>
+
+<Googlelogin></Googlelogin>
+
                     <p className="  text-center  rounded-full py-1 text-cente"> Already registered?<Link to={'/login'}><samp className=" font-bold text-indigo-500">Go to log in</samp></Link> </p>
                  
                 </div>
