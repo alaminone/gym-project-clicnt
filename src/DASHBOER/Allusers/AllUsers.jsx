@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-
+import { FaSearchengin } from "react-icons/fa6";
 import { Helmet } from "react-helmet";
 import Swal from "sweetalert2";
 import useAxiossecure from "../../HOOK/useAxiossecure"
@@ -95,6 +95,16 @@ const AllUsers = () => {
         <title>Power Plase | All users</title>
       </Helmet>
    
+   <div className="flex gap2 justify-end mr-8 my-2 relative">
+      
+   <input
+        type="text"
+        placeholder="Search..."
+      className="border rounded-md p-2"
+      />
+      <button className="btn-ghost btn absolute" type="submit"><FaSearchengin className="text-3xl" /></button>
+   </div>
+ 
      
       <div className="overflow-x-auto mx-8 rounded-t-xl">
         <table className="table table-zebra w-full">

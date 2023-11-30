@@ -35,16 +35,14 @@ const AboutUs = () => {
         <div className="flex-1 relative">
           {/* 1st Image */}
           <div className="flex justify-end mb-6 ml-10">
-            <img className="w-4/6 h-4/6 rounded-md" src="https://i.ibb.co/LtycT7g/young-healthy-man-athlete-doing-exercise-with-ropes-gym-single-male-model-practicing-hard-training-h.png" alt="" />
+            <img className="md:w-4/6 md:h-4/6 rounded-md" src="https://i.ibb.co/LtycT7g/young-healthy-man-athlete-doing-exercise-with-ropes-gym-single-male-model-practicing-hard-training-h.png" alt="" />
            
           </div>
-          <h3 className="flex justify-end">
-            ggggg
-          </h3>
+          
 
           {/* 2nd Image */}
           <div className="absolute top-1/4 right-0 -bottom-8">
-            <img className="w-6/12 h-6/12 border-r-[16px] border-t-[16px] border-white rounded-md" src="https://i.ibb.co/2FbCfKW/young-healthy-man-athlete-doing-exercise-with-ropes-gym-single-male-model-practicing-hard-training-h.png" alt="" />
+            <img className="md:w-6/12 hidden md:block  border-r-[16px] border-t-[16px] border-white rounded-md" src="https://i.ibb.co/2FbCfKW/young-healthy-man-athlete-doing-exercise-with-ropes-gym-single-male-model-practicing-hard-training-h.png" alt="" />
           </div>
         </div>
       </div>

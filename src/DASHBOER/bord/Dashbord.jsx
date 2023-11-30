@@ -19,7 +19,7 @@ const Dashboard = () => {
     <section className="max-w-7xl mx-auto">
       <div className="flex">
         {/* left side */}
-        <div className="min-h-screen w-2/12 text-justify bg-slate-50">
+        <div className="min-h-screen w-3/12 text-justify bg-slate-50">
           <div className="bg-slate-900 py-2 rounded">
             <img
               className="h-28 mx-auto"
