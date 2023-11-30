@@ -56,13 +56,13 @@ const router = createBrowserRouter([
         path: "/trainerdetails/:id",
         element:<Privetroute> <Trainerdetiles></Trainerdetiles></Privetroute>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5001/trainers/${params.id}`)
+          fetch(`https://finalproject-server.vercel.app/trainers/${params.id}`)
       } ,
       {
         path:'/userbookedtrainer/:id',
         element:<Userbookedtrainer></Userbookedtrainer>,
         loader: ({ params }) =>
-        fetch(`http://localhost:5001/trainers/${params.id}`)
+        fetch(`https://finalproject-server.vercel.app/trainers/${params.id}`)
       },
       {
         path:'/payment',

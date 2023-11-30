@@ -3,7 +3,7 @@ import useAuthHook from "./useAuthHook";
 import { useNavigate } from "react-router-dom";
 
 const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5001',
+    baseURL: 'https://finalproject-server.vercel.app/',
   });
 const useAxiossecure = () => {
     const { logOut } = useAuthHook();

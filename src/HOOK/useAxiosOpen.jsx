@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosopen = axios.create({
-    baseURL: 'http://localhost:5001'
+    baseURL: 'https://finalproject-server.vercel.app'
 })
 const useAxiosOpen = () => {
     return axiosopen;
