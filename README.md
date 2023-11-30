@@ -11,4 +11,4 @@ Power Plus Fitness Club
 - Customizable workout programs based on user preferences.
 - User can chooch Trainer he/she want.
 - User can apply for trainer post.
-- 
+- Personalized dashboards.
