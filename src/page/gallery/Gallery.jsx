@@ -6,7 +6,7 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 
 const getimages = async ({ pageParam = 0 }) => {
     try {
-      const res = await fetch(`http://localhost:5001/gallery?limit=10&offset=${pageParam}`);
+      const res = await fetch(`https://finalproject-server.vercel.app/gallery?limit=10&offset=${pageParam}`);
       const data = await res.json();
   
       return { ...data, prevOffset: pageParam };

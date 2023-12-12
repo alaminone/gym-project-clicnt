@@ -77,7 +77,7 @@ Image,
               ))}
           </div>
         </div>
-        {/* to={`/trainerdetails/${trainer._id}`} */}
+        
         <Link to={`/userbookedtrainer/${details._id}`}>
         <div className="  flex justify-end my-9">
        
